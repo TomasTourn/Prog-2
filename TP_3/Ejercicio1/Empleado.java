@@ -1,4 +1,4 @@
-package TP_3;
+package TP_3.Ejercicio1;
 
 public class Empleado {
 

@@ -1,7 +1,4 @@
-package TP_3;
-
-import java.util.ArrayList;
-import java.util.List;
+package TP_3.Ejercicio1;
 
 public class Encuesta {
 
