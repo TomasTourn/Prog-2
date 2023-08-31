@@ -25,7 +25,7 @@ public class Dado {
         this.cantidadCaras = cantidadCaras;
     }
 
-    public  int tirar(){
+    public int tirar(){
         ultimoValor=(int)(Math.random()*cantidadCaras)+1;
         return ultimoValor;
     }
