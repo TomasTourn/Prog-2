@@ -19,7 +19,7 @@ public class CasaPuraSangre extends Casa {
         boolean familiarEnCasa=false;
         for (Alumno familiar : a.getFamiliares()) {
             if (familiar.getCasa() == this) {
-                return true; // Al menos un familiar está en la misma casa, se acepta al alumno.
+                familiarEnCasa=true; // Al menos un familiar está en la misma casa, se acepta al alumno.
             }
         }
 
