@@ -20,7 +20,8 @@ public class Pelicula extends Item{
     }
     @Override
     public void devolver(Item p){
-        if (p.equals(this))
+        Pelicula pe = (Pelicula) p;
+        if (pe.equals(this))
         sumarCantCopias();
     }
     @Override

@@ -36,7 +36,8 @@ public class Auto extends  Item{
     }
     @Override
     public void devolver(Item a){
-        if (a.equals(this))
+        Auto aa = (Auto) a;
+        if (aa.equals(this))
             disponible=true;
     }
     @Override
