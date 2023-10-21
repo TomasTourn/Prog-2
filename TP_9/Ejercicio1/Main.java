@@ -75,21 +75,10 @@ public class Main {
         List<Socio>SocioPago=s.BuscarSocios(new BuscadorPrecio(500),c4);
 
 
-
-        //System.out.println(SocioPago);
-
-      //  System.out.println(s.BuscarSocios(new BuscadorCancha(13)));
-
-        //System.out.println(s.BuscarSocios(new BuscadorCuota(false)));
-
-      //  Collections.sort(SocioEdad,c1);
-
-
-
-
         System.out.println(SocioPago);
 
-       // System.out.println(SocioEdad);
+        System.out.println(SocioEdad);
+
 
 
 
