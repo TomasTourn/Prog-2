@@ -31,11 +31,13 @@ public class Equipo extends ElementoEmpresa {
             String espEmpleado=e.getEspecialidad();
             int cantPorEspecialidad=e.cantEmpleadosxEspecialidad(espEmpleado);//trae la cantidad de empleados por la especialidad del empleado en concreto
 
+
             if(cantPorEspecialidad>cantEspecialidadesMayor){ //mantiene actualizada la especialidad con mas empleados
+
                 cantEspecialidadesMayor=cantPorEspecialidad;
                 especialidadEquipo=espEmpleado;
-            }
 
+            }
 
         }
     return especialidadEquipo;
