@@ -1,6 +1,10 @@
 package TP_9.SistemaArchivos;
 
+import TP_9.SistemaArchivos.Buscadores.Buscador;
+import TP_9.SistemaArchivos.Comparadores.ComparadorElemento;
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Carpeta extends ElementoAbstracto{
@@ -14,8 +18,20 @@ public class Carpeta extends ElementoAbstracto{
     }
 
     public void addElemento(ElementoAbstracto e){
-        if(!elementos.contains(e))
+        if(!elementos.contains(e)){
             elementos.add(e);
+            e.setPadre(this);//al agregarlo, le digo q soy el padre
+        }
+
+    }
+
+    public List<ElementoAbstracto> buscarElementos(Buscador b, ComparadorElemento c){
+        List<ElementoAbstracto>el=new ArrayList<>();
+        for (ElementoAbstracto e:elementos) {
+            el.addAll(e.buscarElementos(b,c));
+        }
+        Collections.sort(el,c);
+        return el;
     }
 
     public double getTamanio(){
@@ -34,4 +50,5 @@ public class Carpeta extends ElementoAbstracto{
         }
         return cant;
     }
+
 }
