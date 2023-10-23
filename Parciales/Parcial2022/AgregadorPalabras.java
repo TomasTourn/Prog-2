@@ -15,6 +15,10 @@ public class AgregadorPalabras {
         this.palabras = new ArrayList<>();
     }
 
+    public void addPalabra(String p){
+        if(p!=null && !palabras.contains(p))
+            palabras.add(p);
+    }
     public List<String> agregar(Noticia n){
         List<String>palabrasAgregar=new ArrayList<>();
         if (condicion.cumple(n)){

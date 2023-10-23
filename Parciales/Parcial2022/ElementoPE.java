@@ -34,5 +34,8 @@ public abstract class ElementoPE {
 
     public abstract void agregarPalabra(AgregadorPalabras a);
 
+    public String toString(){
+        return " Categoria: "+categoria+" Palabras: "+palabrasClave;
+    }
 
 }

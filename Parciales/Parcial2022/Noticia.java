@@ -42,7 +42,9 @@ public class Noticia extends ElementoPE{
         this.autor = autor;
     }
 
-
+    public String toString(){
+        return "\nTitulo: "+titulo+" Texto: "+texto+" Autor: "+autor+super.toString();
+    }
 
     @Override
     public List<Noticia> buscarNoticias(Buscador b) {

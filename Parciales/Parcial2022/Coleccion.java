@@ -69,4 +69,6 @@ public class Coleccion extends ElementoPE{
             e.agregarPalabra(a);
         }
     }
+
+
 }
