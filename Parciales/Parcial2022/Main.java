@@ -3,7 +3,7 @@ package Parciales.Parcial2022;
 import Parciales.Parcial2022.Buscadores.*;
 import TP_9.SistemaArchivos.Buscadores.BuscadorCompuesto;
 
-public class Main { 
+public class Main {
     public static void main(String[] args) {
 
         /*Sistema De Noticias
