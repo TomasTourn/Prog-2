@@ -1,6 +1,7 @@
 package TP_9.Ejercicio6;
 
 import TP_9.Ejercicio6.Buscadores.Buscador;
+import TP_9.Ejercicio6.Calculadores.CobradorAlquiler;
 import TP_9.Ejercicio6.Calculadores.CalculadorValor;
 
 import java.util.ArrayList;
@@ -11,11 +12,12 @@ public class ElementoDeprecated extends Elemento{
     private int mesObsoleto;
     private CalculadorValor calculador;
 
-    public ElementoDeprecated(int codigo, int mesesAntiguedad, double valor, String descripcion, int mesObsoleto, CalculadorValor calculador) {
-        super(codigo, mesesAntiguedad, valor, descripcion);
+    public ElementoDeprecated(int codigo, int mesesAntiguedad, double valor, String descripcion, CobradorAlquiler cobradorAlquiler, int mesObsoleto, CalculadorValor calculador) {
+        super(codigo, mesesAntiguedad, valor, descripcion, cobradorAlquiler);
         this.mesObsoleto = mesObsoleto;
         this.calculador = calculador;
     }
+
     public boolean deprecado(){//chequeo si esta dreprecado o no
         return mesObsoleto >= super.getAntiguedad();
     }

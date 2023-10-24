@@ -12,6 +12,7 @@ public abstract class ElementoAlquiler {
         this.codigo = codigo;
     }
 
+    public abstract double cobrarAlquiler();
     public abstract List<Elemento>buscarElementos(Buscador b);
     public abstract double getValor();
     public abstract int getAntiguedad();

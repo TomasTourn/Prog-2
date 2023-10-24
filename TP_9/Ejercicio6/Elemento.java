@@ -1,6 +1,7 @@
 package TP_9.Ejercicio6;
 
 import TP_9.Ejercicio6.Buscadores.Buscador;
+import TP_9.Ejercicio6.Calculadores.CobradorAlquiler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,12 +11,19 @@ public class Elemento extends ElementoAlquiler{
     private int mesesAntiguedad;
     private double valor;
     private String descripcion;
+    private CobradorAlquiler cobradorAlquiler;
 
-    public Elemento(int codigo, int mesesAntiguedad, double valor, String descripcion) {
+    public Elemento(int codigo, int mesesAntiguedad, double valor, String descripcion, CobradorAlquiler cobradorAlquiler) {
         super(codigo);
         this.mesesAntiguedad = mesesAntiguedad;
         this.valor = valor;
         this.descripcion = descripcion;
+        this.cobradorAlquiler = cobradorAlquiler;
+    }
+
+    @Override
+    public double cobrarAlquiler() {
+        return cobradorAlquiler.calcularAlquiler(this);
     }
 
     @Override
@@ -25,6 +33,8 @@ public class Elemento extends ElementoAlquiler{
                 elemento.add(this);
             return elemento;
     }
+
+
 
     public int getAntiguedad() {
         return mesesAntiguedad;
@@ -48,5 +58,13 @@ public class Elemento extends ElementoAlquiler{
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public CobradorAlquiler getCobradorAlquiler() {
+        return cobradorAlquiler;
+    }
+
+    public void setCobradorAlquiler(CobradorAlquiler cobradorAlquiler) {
+        this.cobradorAlquiler = cobradorAlquiler;
     }
 }
