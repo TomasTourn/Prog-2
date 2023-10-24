@@ -37,6 +37,15 @@ public class ComboArmado extends ElementoAlquiler{
     }
 
     @Override
+    public double cobrarAlquiler() {
+        double costo=0;
+        for (ElementoAlquiler e:elementos) {
+                costo+=e.cobrarAlquiler();
+        }
+        return costo;
+    }
+
+    @Override
     public List<Elemento> buscarElementos(Buscador b) {
         List<Elemento>elementosBuscados=new ArrayList<>();
         for (ElementoAlquiler e:elementos) {

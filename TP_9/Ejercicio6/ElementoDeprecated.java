@@ -11,11 +11,29 @@ public class ElementoDeprecated extends Elemento{
 
     private int mesObsoleto;
     private CalculadorValor calculador;
+    private double divisorDeprecado;
 
-    public ElementoDeprecated(int codigo, int mesesAntiguedad, double valor, String descripcion, CobradorAlquiler cobradorAlquiler, int mesObsoleto, CalculadorValor calculador) {
+    public ElementoDeprecated(int codigo, int mesesAntiguedad, double valor, String descripcion, CobradorAlquiler cobradorAlquiler, int mesObsoleto, CalculadorValor calculador, double divisorDeprecado) {
         super(codigo, mesesAntiguedad, valor, descripcion, cobradorAlquiler);
         this.mesObsoleto = mesObsoleto;
         this.calculador = calculador;
+        this.divisorDeprecado = divisorDeprecado;
+    }
+
+    public double getDivisorDeprecado() {
+        return divisorDeprecado;
+    }
+
+    public void setDivisorDeprecado(double divisorDeprecado) {
+        this.divisorDeprecado = divisorDeprecado;
+    }
+
+    @Override
+    public double cobrarAlquiler() {
+        if (deprecado())
+            return cobrarAlquiler()/divisorDeprecado;
+        else 
+            return super.cobrarAlquiler();
     }
 
     public boolean deprecado(){//chequeo si esta dreprecado o no
