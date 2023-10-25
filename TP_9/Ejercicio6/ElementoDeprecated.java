@@ -32,7 +32,7 @@ public class ElementoDeprecated extends Elemento{
     public double cobrarAlquiler() {
         if (deprecado())
             return cobrarAlquiler()/divisorDeprecado;
-        else 
+        else
             return super.cobrarAlquiler();
     }
 
