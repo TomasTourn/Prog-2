@@ -1,8 +1,10 @@
 package TP_9.Ejercicio8;
 
+import TP_9.Ejercicio8.Comparadores.Comparador;
 import TP_9.Ejercicio8.Condiciones.Condicion;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Playlist extends ElementoVideo{
@@ -22,11 +24,12 @@ public class Playlist extends ElementoVideo{
     }
 
     @Override
-    public List<Video> buscarVideos(Condicion c) {
+    public List<Video> buscarVideos(Condicion c, Comparador comp) {
         List<Video>videos=new ArrayList<>();
         for (ElementoVideo e:elementos) {
-                elementos.addAll(e.buscarVideos(c));
+                elementos.addAll(e.buscarVideos(c,comp));
         }
+        Collections.sort(videos,comp);
         return videos;
     }
 

@@ -2,6 +2,8 @@ package TP_9.Ejercicio6;
 
 import TP_9.Ejercicio6.Buscadores.Buscador;
 import TP_9.Ejercicio6.Calculadores.CobradorAlquiler;
+import TP_9.Ejercicio6.Comparadores.ComparadorElemento;
+import TP_9.Ejercicio8.Comparadores.Comparador;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +29,7 @@ public class Elemento extends ElementoAlquiler{
     }
 
     @Override
-    public List<Elemento> buscarElementos(Buscador b) {
+    public List<Elemento> buscarElementos(Buscador b, ComparadorElemento c) {
         List<Elemento>elemento=new ArrayList<>();
             if (b.cumple(this))
                 elemento.add(this);

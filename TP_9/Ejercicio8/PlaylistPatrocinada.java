@@ -1,5 +1,6 @@
 package TP_9.Ejercicio8;
 
+import TP_9.Ejercicio8.Comparadores.Comparador;
 import TP_9.Ejercicio8.Condiciones.Condicion;
 
 import java.util.ArrayList;
@@ -14,10 +15,10 @@ public class PlaylistPatrocinada extends Playlist{
     }
 
     @Override
-    public List<Video> buscarVideos(Condicion c) {
+    public List<Video> buscarVideos(Condicion c, Comparador comp) {
         List<Video>videos=new ArrayList<>();
         videos.add(v);
-        videos.addAll(super.buscarVideos(c));
+        videos.addAll(super.buscarVideos(c,comp));
         return videos;
     }
 }

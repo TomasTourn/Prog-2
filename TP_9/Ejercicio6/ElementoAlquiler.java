@@ -1,6 +1,8 @@
 package TP_9.Ejercicio6;
 
 import TP_9.Ejercicio6.Buscadores.Buscador;
+import TP_9.Ejercicio6.Comparadores.ComparadorElemento;
+import TP_9.Ejercicio8.Comparadores.Comparador;
 
 import java.util.List;
 
@@ -13,7 +15,7 @@ public abstract class ElementoAlquiler {
     }
 
     public abstract double cobrarAlquiler();
-    public abstract List<Elemento>buscarElementos(Buscador b);
+    public abstract List<Elemento>buscarElementos(Buscador b, ComparadorElemento c);
     public abstract double getValor();
     public abstract int getAntiguedad();
 

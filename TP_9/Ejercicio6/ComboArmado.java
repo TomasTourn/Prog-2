@@ -1,8 +1,11 @@
 package TP_9.Ejercicio6;
 
 import TP_9.Ejercicio6.Buscadores.Buscador;
+import TP_9.Ejercicio6.Comparadores.ComparadorElemento;
+import TP_9.Ejercicio8.Comparadores.Comparador;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ComboArmado extends ElementoAlquiler{
@@ -46,11 +49,12 @@ public class ComboArmado extends ElementoAlquiler{
     }
 
     @Override
-    public List<Elemento> buscarElementos(Buscador b) {
+    public List<Elemento> buscarElementos(Buscador b, ComparadorElemento c) {
         List<Elemento>elementosBuscados=new ArrayList<>();
         for (ElementoAlquiler e:elementos) {
-            elementosBuscados.addAll(e.buscarElementos(b));
+            elementosBuscados.addAll(e.buscarElementos(b,c));
         }
+        elementosBuscados.sort(c);
         return elementosBuscados;
     }
 }

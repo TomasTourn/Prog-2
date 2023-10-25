@@ -1,5 +1,6 @@
 package TP_9.Ejercicio8;
 
+import TP_9.Ejercicio8.Comparadores.Comparador;
 import TP_9.Ejercicio8.Condiciones.Condicion;
 
 import java.util.ArrayList;
@@ -33,7 +34,7 @@ public class Video extends ElementoVideo{
     }
 
     @Override
-    public List<Video> buscarVideos(Condicion c) {
+    public List<Video> buscarVideos(Condicion c, Comparador comp) {
         List<Video>video=new ArrayList<>();
             if (c.cumple(this))
                 video.add(this);
